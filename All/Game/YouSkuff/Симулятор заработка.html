@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!--
+    2024
+    Симулятор заработка
+    ©️ GMhub
+    Проект компании SiteInclusive
+-->
+<html>
+    <head>
+        <title>SiteInclusive: симулятор заработка</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <style>
+            html {
+                height:100%;
+            }
+            body {
+                color:black;
+                background-color:cornsilk;
+                font-family:Arial, sans-serif;
+                text-align:center;
+                touch-action:manipulation;
+                height:100%;
+                margin:0;
+            }
+            a {
+                text-decoration:none;
+            }
+
+            #Mbutton {
+                color:white;
+                background-color:#4CAF50;
+                width:115px;
+                height:50px;
+                border:none;
+                cursor:pointer;
+                text-align:center;
+                font-size:15px;
+                border-radius:10px;
+                touch-action:manipulation;
+                display:inline-block;
+            }
+            .Income {
+                font-size: 18px;
+                margin:10px 0;
+            }
+            .Upgrade-button, .Buisness-button {
+                color:white;
+                background-color:cornflowerblue;
+                width:80px;
+                height:30px;
+                border:none;
+                cursor:pointer;
+                text-align:center;
+                font-size:15px;
+                border-radius:10px;
+            }
+            .Upgrade-button:disabled, .Buisness-button:disabled {
+                background-color:darkgray;
+                cursor:not-allowed;
+            }
+            .Upgrade-info, .Buisness-info {
+                font-size: 18px;
+                margin:10px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <br><br>
+            <div id="Mcoin"><h2>Баланс: 0</h2></div>
+            <br>
+            <button id="Mbutton">Заработать</button>
+            <br><br><br>
+            <div class="Income">
+                <span id="CIncome">Доход с нажатий: 0</span>
+                <br><br>
+                <span id="BIncome">Доход с бизнесов: 0</span>
+            </div>
+            <br>
+            <div id="Upgrade">
+                <h2>Улучшения</h2>
+                <div class="Upgrade-info">
+                    <span>+1 за клик. Цена = 10</span>
+                    <button id="Upgrade1" class="Upgrade-button">Купить</button>
+                </div>
+                <div class="Upgrade-info">
+                    <span>+5 за клик. Цена = 50</span>
+                    <button id="Upgrade2" class="Upgrade-button">Купить</button>
+                </div>
+                <div class="Upgrade-info">
+                    <span>+10 за клик. Цена = 100</span>
+                    <button id="Upgrade3" class="Upgrade-button">Купить</button>
+                </div>
+                <div class="Upgrade-info">
+                    <span>+15 за клик. Цена = 150</span>
+                    <button id="Upgrade4" class="Upgrade-button">Купить</button>
+                </div>
+                <div class="Upgrade-info">
+                    <span>+20 за клик. Цена = 200</span>
+                    <button id="Upgrade5" class="Upgrade-button">Купить</button>
+                </div>
+                <div class="Upgrade-info">
+                    <span>+25 за клик. Цена = 250</span>
+                    <button id="Upgrade6" class="Upgrade-button">Купить</button>
+                </div>
+            </div>
+            <div id="Buisness">
+                <h2>Бизнесы</h2>
+                <div class="Buisness-info">
+                    <span>+1 в сек. Цена = 10000</span>
+                    <button id="Buisness1" class="Buisness-button">Купить</button>
+                </div>
+                <div class="Buisness-info">
+                    <span>+5 в сек. Цена = 50000</span>
+                    <button id="Buisness2" class="Buisness-button">Купить</button>
+                </div>
+                <div class="Buisness-info">
+                    <span>+10 в сек. Цена = 100000</span>
+                    <button id="Buisness3" class="Buisness-button">Купить</button>
+                </div>
+                <div class="Buisness-info">
+                    <span>+15 в сек. Цена = 150000</span>
+                    <button id="Buisness4" class="Buisness-button">Купить</button>
+                </div>
+                <div class="Buisness-info">
+                    <span>+20 в сек. Цена = 200000</span>
+                    <button id="Buisness5" class="Buisness-button">Купить</button>
+                </div>
+                <div class="Buisness-info">
+                    <span>+25 в сек. Цена = 250000</span>
+                    <button id="Buisness6" class="Buisness-button">Купить</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        </script>
+
+        <!-- <script>
+            let Mcoin = parseInt(localStorage.getItem('Mcoin')) || 0;
+            let Coins = parseInt(localStorage.getItem('Coins')) || 1;
+            let Buisnesses = parseInt(localStorage.getItem('Buisnesses')) || 0;
+            let CIncome = parseInt(localStorage.getItem('CIncome'));
+            let BIncome = parseInt(localStorage.getItem('BIncome'));
+            let Buisness = JSON.parse(localStorage.getItem('Buisness')) || {1: 0, 2: 0, 3: 0};
+            let BuisnessIncome = 0;
+
+            BuisnessIncome = Buisness[1] * 10 + Buisness[2] * 50 + Buisness[3] * 100;
+
+            const Mcoincoin = document.getElementById('Mcoin');
+            const Mbuttonbutton = document.getElementById('Mbutton');
+            const CIncomeincome = document.getElementById('CIncome');
+            const BIncomeincome = document.getElementById('BIncome');
+            const Clear = document.getElementById('Clear');
+            const Upgrade1 = document.getElementById('Upgrade1');
+            const Upgrade2 = document.getElementById('Upgrade2');
+            const Upgrade3 = document.getElementById('Upgrade3');
+            const Buisness1 = document.getElementById('Buisness1');
+            const Buisness2 = document.getElementById('Buisness2');
+            const Buisness3 = document.getElementById('Buisness3');
+
+            function Click() {
+                Mcoin += Coins;
+                SaveData();
+                UpdateDisplay();
+            }
+
+            function UpdateDisplay() {
+                Mcoincoin.innerHTML = `<h2>Баланс: ${Mcoin}</h2>`;
+                CIncomeincome.innerHTML = `<span id="CIncome">Доход с нажатий: ${Coins}</span>`;
+                BIncomeincome.innerHTML = `<span id="BIncome">Доход с бизнесов: ${Buisnesses}</span>`;
+                Upgrade1.disabled = Mcoin < 10;
+                Upgrade2.disabled = Mcoin < 50;
+                Upgrade3.disabled = Mcoin < 100;
+                Buisness1.disabled = Mcoin < 20000;
+                Buisness2.disabled = Mcoin < 50000;
+                Buisness3.disabled = Mcoin < 100000;
+            }
+
+            function BuyUpgrade(cost, income) {
+                if (Mcoin >= cost) {
+                    Mcoin -= cost;
+                    Coins += income;
+                    SaveData();
+                    UpdateDisplay();
+                }
+            }
+
+            function BuyBuisness(BuisnessId, cost, income) {
+                if (Mcoin >= cost) {
+                    Mcoin -= cost;
+                    Buisnesses += income
+                    Buisness[BuisnessId]++;
+                    BuisnessIncome += income;
+                    SaveData();
+                    UpdateDisplay();
+                }
+            }
+
+            function UpdateBuisnessIncome() {
+                Mcoin += BuisnessIncome;
+                SaveData();
+                UpdateDisplay();
+            }
+
+            function SaveData() {
+                localStorage.setItem('Mcoin', Mcoin);
+                localStorage.setItem('Coins', Coins);
+                localStorage.setItem('Buisnesses', Buisnesses);
+                localStorage.setItem('CIncome', CIncome);
+                localStorage.setItem('BIncome', BIncome);
+                localStorage.setItem('Buisness', JSON.stringify(Buisness));
+            }
+
+            Mbuttonbutton.addEventListener('click', Click);
+            Upgrade1.addEventListener('click', () => BuyUpgrade(10, 1));
+            Upgrade2.addEventListener('click', () => BuyUpgrade(50, 5));
+            Upgrade3.addEventListener('click', () => BuyUpgrade(100, 10));
+            Buisness1.addEventListener('click', () => BuyBuisness(1, 20000, 1));
+            Buisness2.addEventListener('click', () => BuyBuisness(2, 50000, 5));
+            Buisness3.addEventListener('click', () => BuyBuisness(3, 100000, 10));
+
+            setInterval(UpdateBuisnessIncome, 1000);
+
+            // localStorage.clear();
+
+            UpdateDisplay();
+        </script> -->
+    </body>
+</html>

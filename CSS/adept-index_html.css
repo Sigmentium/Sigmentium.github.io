@@ -1,0 +1,23 @@
+@media (max-width:576px) {
+    #ColumnL, #ColumnR, #Adept5762, #Adept768 {
+        display:none;
+    }
+}
+
+@media (min-width:576px) {
+    #columnL, #ColumnR, #Adept5761, #Adept768 {
+        display:none;
+    }
+}
+
+@media (min-width:768px) {
+    #ColumnL, #ColumnR, #Adept5761, #Adept5762 {
+        display:none;
+    }
+}
+
+@media (min-width:992px) {
+    #Adept5761, #Adept5762, #Adept768 {
+        display:none;
+    }
+}
