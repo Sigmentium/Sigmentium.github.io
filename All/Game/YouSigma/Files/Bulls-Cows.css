@@ -1,0 +1,18 @@
+body {
+	background-color:lightskyblue;
+	font-family:Monospace;
+}
+button {
+	color:white;
+	background-color:black;
+	width:200px;
+	cursor:pointer;
+	border:2px solid white;
+	text-align:center;
+	margin:0 auto;
+	border-radius:15px;
+}
+
+.center {
+	text-align:center;
+}

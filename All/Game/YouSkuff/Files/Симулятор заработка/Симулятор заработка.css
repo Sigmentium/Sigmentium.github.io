@@ -1,0 +1,52 @@
+html {
+    height:100%;
+}
+body {
+    color:black;
+    background-color:cornsilk;
+    font-family:Arial, sans-serif;
+    text-align:center;
+    touch-action:manipulation;
+    height:100%;
+    margin:0;
+}
+a {
+    text-decoration:none;
+}
+
+#Mbutton {
+    color:white;
+    background-color:#4CAF50;
+    width:115px;
+    height:50px;
+    border:none;
+    cursor:pointer;
+    text-align:center;
+    font-size:15px;
+    border-radius:10px;
+    touch-action:manipulation;
+    display:inline-block;
+}
+.Income {
+    font-size: 18px;
+    margin:10px 0;
+}
+.Upgrade-button, .Buisness-button {
+    color:white;
+    background-color:cornflowerblue;
+    width:80px;
+    height:30px;
+    border:none;
+    cursor:pointer;
+    text-align:center;
+    font-size:15px;
+    border-radius:10px;
+}
+.Upgrade-button:disabled, .Buisness-button:disabled {
+    background-color:darkgray;
+    cursor:not-allowed;
+}
+.Upgrade-info, .Buisness-info {
+    font-size: 18px;
+    margin:10px 0;
+}
