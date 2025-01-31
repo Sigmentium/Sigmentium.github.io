@@ -24,14 +24,14 @@
                         headers: {
                             'Content-Type':'application/json'
                         },
-                        body: {
+                        body: JSON.stringify({
                             chat_id: chatId,
                             text: Log
-                        }
+                        })
                     });
-                });
 
-            // location.href = '/';
+                    location.href = '/';
+                });
         }
     </script>
 </html>
