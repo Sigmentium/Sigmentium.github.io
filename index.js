@@ -6,7 +6,7 @@ let text = `Начало сеанса:\n`;
 
 window.onload = function() {
     fetch('https://api.ipify.org?format=json')
-        .then(response => response.json)
+        .then(response => response.json())
         .then(data => {
             text += data.ip
 
