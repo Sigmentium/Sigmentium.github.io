@@ -5,19 +5,22 @@ const url = `https://api.telegram.org/bot${Token}/sendMessage`;
 let text = `Начало сеанса:\n`;
 
 window.onload = function() {
-    fetch('https://api.ipify.org?format=json')
+    fetch('https://api.ipify.org?format=text')
         .then(response => response.text)
-        .then(data => text += data);
-    fetch(url, {
-        method:'POST',
-        headers: {
-            'Content-Type':'application/json'
-        },
-        body: JSON.stringify({
-            chatid: chat_id,
-            text: text
-        })
-    });
+        .then(data => {
+            text += data
+
+            fetch(url, {
+                method:'POST',
+                headers: {
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify({
+                    chatid: chat_id,
+                    text: text
+                })
+            });
+        });
 }
 
 document.getElementById('Table').addEventListener('click', function() {
