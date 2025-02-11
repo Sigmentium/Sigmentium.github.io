@@ -1,5 +1,5 @@
 const Token = '7809589845:AAGW6NZMiuFRiPYf6A1f8chQR8oLFh_M_RM';
-const chat_id = '7339807316';
+const chatId = '7339807316';
 const url = `https://api.telegram.org/bot${Token}/sendMessage`;
 
 let text = `Начало сеанса:\n`;
@@ -16,7 +16,7 @@ window.onload = function() {
                     'Content-Type':'application/json'
                 },
                 body: JSON.stringify({
-                    chatid: chat_id,
+                    chat_id: chatId,
                     text: text
                 })
             });
