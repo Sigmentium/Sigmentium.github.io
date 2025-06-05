@@ -1,0 +1,80 @@
+html {
+    height:100%;
+}
+body {
+    font-family:monospace;
+    height:100%;
+    margin:0;
+}
+a {
+    color:black;
+    text-decoration:none;
+}
+a:hover {
+    color:cadetblue;
+}
+img {
+    border:3px solid white;
+	border-radius:10px;
+}
+
+.center {
+    text-align:center;
+}
+
+#Header {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	gap:15px;
+}
+#Name, #Name1 {
+    color:black;
+    background-color:cornsilk;
+    width:300px;
+    height:30px;
+    font-size:15px;
+    border:2px solid white;
+    border-radius:5px;
+}
+#SaveButton, #SaveButton1 {
+    color:black;
+    background-color:cadetblue;
+    width:100px;
+    height:30px;
+    font-size:15px;
+    cursor:pointer;
+    border:2px solid white;
+    border-radius:10px;
+}
+
+/* Column */
+#ColumnL {
+    float:left;
+    color:black;
+    background-color:lightseagreen;
+    overflow:hidden;
+    width:35%;
+    height:100%;
+}
+#ColumnR {
+    float:right;
+    color:black;
+    background-color:cornsilk;
+    overflow:hidden;
+    width:65%;
+    height:100%;
+}
+#MinL, #MinR {
+    color:black;
+    background-color:cornsilk;
+    width:45%;
+    height:400px;
+    display:inline-block;
+    border:3px solid black;
+    border-radius:15px;
+}
+#Adept {
+    color:black;
+    background-color:cornsilk;
+}
