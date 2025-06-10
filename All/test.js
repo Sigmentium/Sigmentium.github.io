@@ -46,4 +46,6 @@ async function subscribeForPush() {
 }
 
 // Можно подписывать пользователя по кнопке, например:
-document.getElementById('subscribeBtn').onclick = subscribeForPush;
+document.getElementById('subscribeBtn').addEventListener('click', () => {
+   subscribeForPush();
+});
