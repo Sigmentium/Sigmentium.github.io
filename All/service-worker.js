@@ -1,11 +1,22 @@
 self.addEventListener('push', (event) => {
-    let options = {
-        body: event.data.text(),
-        icon: '/Photo/Sigmentium.jpeg',
-        badge: '/badge.png'
-    };
+  let data = {};
 
-    event.waitUntil(
-        self.registration.showNotification('Новое уведомление!', options)
-    );
+  if (event.data) {
+    try {
+      data = event.data.json();
+    } catch (e) {
+      data = { title: 'Новое уведомление', message: event.data.text() };
+    }
+  }
+
+  const title = data.title || 'Новое уведомление';
+  const options = {
+    body: data.message || 'Текст отсутствует',
+    icon: '/Photo/Sigmentium.jpeg',
+    badge: '/badge.png'
+  };
+
+  event.waitUntil(
+    self.registration.showNotification(title, options)
+  );
 });
