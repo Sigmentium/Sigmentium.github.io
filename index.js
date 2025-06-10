@@ -12,12 +12,3 @@ else {
 function Fall() {
     alert('Временно недоступно');
 }
-
-Notification.requestPermission().then(permission => {
-  if (permission === 'granted') {
-    new Notification('Привет!', {
-      body: 'Это локальное уведомление',
-      icon: '/icon.png'
-    });
-  }
-});
