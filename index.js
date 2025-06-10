@@ -15,8 +15,8 @@ function Fall() {
 
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-        alert('Service Worker зарегистрирован с помощью:', registration);
+        alert(`Service Worker зарегистрирован с помощью: ${registration}`);
     }).catch(function(error) {
-        alert('Ошибка регистрации Service Worker:', error);
+        alert(`Ошибка регистрации Service Worker: ${error}`);
     });
 }
