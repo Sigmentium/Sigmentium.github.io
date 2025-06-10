@@ -13,6 +13,14 @@ function Fall() {
     alert('Временно недоступно');
 }
 
+Notification.requestPermission().then(function(permission) {
+    if (permission === "granted") {
+        console.log("Разрешение на уведомления получено!");
+    } else {
+        console.log("Разрешение на уведомления отклонено.");
+    }
+});
+
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
         alert(`Service Worker зарегистрирован с помощью: ${registration}`);
