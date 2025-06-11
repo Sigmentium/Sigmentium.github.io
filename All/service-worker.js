@@ -13,7 +13,7 @@ self.addEventListener('push', (event) => {
   const options = {
     body: data.message || 'Текст отсутствует',
     icon: '/Photo/Sigmentium.jpeg',
-    badge: '/badge.png'
+    badge: '/Photo/Sigmentium.jpeg'
   };
 
   event.waitUntil(
