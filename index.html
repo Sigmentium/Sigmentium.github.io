@@ -113,19 +113,5 @@
         </div>
         <script src="index.js"></script>
         <script src="https://tykecyy.com?js=1&code_type=1&vast=1&vast_position=postroll&sid=939278"></script>
-<script>
-  // Перехватываем обычные ошибки
-  window.onerror = function (message, source, lineno, colno, error) {
-    alert("Ошибка: " + message + "\n" +
-          "Файл: " + source + "\n" +
-          "Строка: " + lineno + ", столбец: " + colno);
-    return false; // чтобы также писалось в консоль (можно убрать)
-  };
-
-  // Перехватываем ошибки промисов (например, fetch)
-  window.addEventListener('unhandledrejection', function (event) {
-    alert("Ошибка в промисе: " + event.reason);
-  });
-</script>
     </body>
 </html>
