@@ -1,0 +1,33 @@
+body {
+    background-color:white;
+    font-family:Verdana;
+}
+
+.Tesis {
+    color:crimson;
+}
+.Code {
+    color:black;
+    background-color:lightgrey;
+    width:95%;
+    height:auto;
+    border:2px solid black;
+    border-radius:15px;
+    font-family:monospace;
+    padding-left:10px;
+}
+.Des {
+    margin-left:50px;
+}
+.SupCenter {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.center {
+    text-align:center;
+}
+
+#Header {
+    padding-left:30px;
+}

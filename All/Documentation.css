@@ -1,0 +1,19 @@
+body {
+	background-color:lightskyblue;
+	font-family:Monospace;
+	margin:0;
+}
+a {
+	color:black;
+	text-decoration:none;
+}
+
+.center {
+	text-align:center;
+}
+.Des {
+	margin-left:50px;
+}
+.red {
+	color:red;
+}
