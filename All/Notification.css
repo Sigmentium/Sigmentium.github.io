@@ -1,0 +1,18 @@
+body {
+    background-color:lightskyblue;
+    font-family:Verdana;
+}
+button {
+    color:black;
+    background-color:white;
+    width:150px;
+    height:40px;
+    cursor:pointer;
+    font-size:20px;
+    border:2px solid black;
+    border-radius:10px;
+}
+
+.center {
+    text-align:center;
+}
