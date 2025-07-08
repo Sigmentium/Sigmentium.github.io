@@ -1,0 +1,50 @@
+html {
+    height:100%;
+}
+body {
+    height:100%;
+    font-family:Verdana;
+    margin:0;
+}
+input {
+    color:black;
+    background-color:lightgrey;
+    width:200px;
+    height:30px;
+    font-size:15px;
+    text-align:center;
+    border:2px solid black;
+    border-radius:10px;
+}
+button {
+    color:black;
+    background-color:lightgrey;
+    width:150px;
+    height:40px;
+    font-size:20px;
+    cursor:pointer;
+    border:2px solid black;
+    border-radius:10px;
+}
+li {
+    cursor:pointer;
+}
+
+.red {
+    color:red;
+}
+.center {
+    text-align:center;
+}
+
+#ColumnL {
+    float:left;
+    background-color:lightgrey;
+    width:25%;
+    height:100%;
+}
+#ColumnR {
+    float:right;
+    width:75%;
+    height:100%;
+}

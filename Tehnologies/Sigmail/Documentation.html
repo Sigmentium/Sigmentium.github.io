@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sigmail: документация</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="https://sigmentium.github.io/Photo/Sigmentium.jpeg">
+        <link rel="stylesheet" href="Documentation.css">
+    </head>
+    <body>
+        <div id="Header">
+            <H1>Документация API <span class="Tesis">Sigmail</span></H1>
+            <H3>URL для запросов - <span class="Tesis">https://sigmail-gic3.onrender.com</span></H3>
+        </div>
+        <hr color="black">
+        <H1 class="center">Отправка одного письма</H1>
+        <p>
+            <H3>
+                <span class="Des">Параметры:</span><br>
+                to - почта получателя<br>
+                title - заголовок письма<br>
+                text - содержание письма<br><br>
+                <span class="Des">Пример:</span><br><br>
+                <div class="SupCenter">
+                    <div class="Code">
+<pre>
+fetch('https://sigmail-gic3.onrender.com/api/sendMail', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        to: 'почтаПолучателя',
+        title: 'заголовокПисьма',
+        text: 'содержаниеПисьма'
+    })
+});</pre>
+                    </div>
+                </div>
+            </H3>
+        </p>
+        <hr color="black">
+        <br>
+        <H1 class="center">Массовая рассылка</H1>
+        <p>
+            <H3>
+                <span class="Des">Параметры</span><br>
+                to - массив с почтами<br>
+                title - заголовок писем<br>
+                text - содержание писем<br><br>
+                <span class="Des">Пример:</span><br><br>
+                <div class="SupCenter">
+                    <div class="Code">
+<pre>
+fetch('https://sigmail-gic3.onrender.com/api/sendMails', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        to: ['почтаПолучателя1', 'почтаПолучателя2', 'почтаПолучателя3'...],
+        title: 'заголовокПисьма',
+        text: 'содержаниеПисьма'
+    })
+});</pre>
+                    </div>
+                </div>
+            </H3>
+        </p>
+        <hr color="black">
+        <br>
+        <H1 class="center">Отправка кода подтверждения</H1>
+        <p>
+            <H3>
+                <span class="Des">Параметры</span><br>
+                to - почта получателя<br>
+                senter - имя сервиса (имя отправителя)<br><br>
+                <span class="Des">Пример:</span><br><br>
+                <div class="SupCenter">
+                    <div class="Code">
+<pre>
+fetch('https://sigmail-gic3.onrender.com/api/codeConfirm', {
+    method:'POST',
+    headers: {
+        'Content-Type':'application/json'
+    },
+    body: JSON.stringify({
+        to: 'почтаПолучателя',
+        senter: 'имяСервиса'
+    })
+})
+    .then(response => response.text())
+    .then(data => console.log(data));</pre>
+                    </div>
+                </div>
+            </H3>
+        </p>
+    </body>
+</html>
