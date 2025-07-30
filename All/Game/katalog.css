@@ -1,0 +1,53 @@
+body {
+    background-color:lightskyblue;
+    font-family:monospace;
+}
+button {
+    color:black;
+    background-color:cornflowerblue;
+    font-size:15px;
+    width:100px;
+    height:40px;
+    cursor:pointer;
+    transition:transform .2s;
+    border:2px solid black;
+    border-radius:10px;
+}
+button:hover {
+    background-color:grey;
+    transform:scale(1.2);
+}
+img {
+    border:3px solid white;
+    border-radius:20px;
+}
+
+.link {
+    color:black;
+    text-decoration:none;
+}
+.Tesis {
+    color:crimson;
+}
+.SupCenter {
+    display:flex;
+    width:fit-content;
+    justify-items:center;
+    align-items:center;
+    flex-wrap:wrap;
+    margin:0 auto;
+    gap:10px;
+}
+.center {
+    text-align:center;
+}
+
+#Block {
+    color:black;
+    background-color:lightgrey;
+    width:250px;
+    height:250px;
+    text-align:center;
+    border:2px solid black;
+    border-radius:15px;
+}
