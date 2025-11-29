@@ -1,0 +1,44 @@
+body {
+    background-color:lightskyblue;
+    font-family:Verdana;
+    padding:20px;
+    margin:0;
+}
+
+.white {
+    color:white;
+}
+.center {
+    text-align: center;
+}
+
+#Table {
+    width:100%;
+    border-collapse:collapse;
+    margin: 20px 0;
+    border: 5px solid;
+    border-image: linear-gradient(45deg, #ff7a00, #ff0080, #b400ff, #4a00ff); /* Цветная градиентная рамка */
+    border-image-slice: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Лёгкая тень для эффекта */
+    background-color: white;
+}
+
+#Table th {
+    color:white;
+    background-color:black;
+    font-size:20px;
+    padding:12px;
+}
+
+#Table td {
+    padding:10px;
+    border-bottom:1px solid white;
+}
+
+/* #Table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+} */
+
+#Table tbody tr:hover {
+    background-color:lightgrey;
+}
