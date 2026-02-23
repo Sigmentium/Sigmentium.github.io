@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--
+    2025
+    Симулятор заработка
+    ©️ Sigmentium
+-->
+<html>
+    <head>
+        <title>Симулятор заработка</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="https://sigmentium.github.io/Photo/Sigmentium.jpeg">
+        <style>
+            body {
+                color:black;
+                background-color:cornsilk;
+                font-family:Arial, sans-serif;
+                touch-action:manipulation;
+                text-align:center;
+                height:100%;
+                margin:0;
+            }
+            input {
+                color:black;
+                background-color:lightgrey;
+                width:200px;
+                height:40px;
+                font-size:20px;
+                border:none;
+                border-radius:10px;
+                text-align:center;
+            }
+
+            #Mbutton {
+                color:white;
+                background-color:#4CAF50;
+                width:115px;
+                height:50px;
+                font-size:15px;
+                cursor:pointer;
+                border:none;
+                border-radius:10px;
+                text-align:center;
+                display:inline-block;
+            }
+            #SyncButton {
+                color:white;
+                background-color:cornflowerblue;
+                width:auto;
+                height:50px;
+                font-size:15px;
+                cursor:pointer;
+                border:none;
+                border-radius:10px;
+                text-align:center;
+                display:inline-block;
+            }
+            #Buy-upgrade, #Buy-buisness {
+                color:white;
+                background-color:cornflowerblue;
+                width:100px;
+                height:40px;
+                font-size:15px;
+                cursor:pointer;
+                border:none;
+                border-radius:10px;
+                text-align:center;
+                display:inline-block;
+            }
+
+            .Income {
+                font-size:18px;
+                margin:10px 0;
+            }
+            .Button {
+                color:white;
+                background-color:cornflowerblue;
+                width:80px;
+                height:30px;
+                border:none;
+                cursor:pointer;
+                text-align:center;
+                font-size:15px;
+                border-radius:10px;
+            }
+            .Button:disabled {
+                background-color:darkgray;
+                cursor:not-allowed;
+            }
+            .Upgrade-info, .Buisness-info {
+                font-size:18px;
+                margin:10px 0;
+            }
+
+            .Bigger-button {
+                color:black;
+                cursor:pointer;
+            }
+            .Bigger-button:hover {
+                color:lightgrey;
+            }
+        </style>
+    </head>
+    <body>
+        <br><br>
+        <div id="Mcoin"><h2>Баланс: 0</h2></div>
+        <br>
+        <button id="Mbutton">Заработать</button>
+        <br><br><br>
+        <div class="Income">
+            <span id="CIncome">Доход с нажатий: 0</span>
+            <br><br>
+            <span id="BIncome">Доход с бизнесов: 0</span>
+        </div>
+        <br>
+        <div id="Upgrade">
+            <h2>Улучшения</h2>
+            <div class="Upgrade-info">
+                <span>+1 за клик. Цена = 10</span>
+                <button id="Upgrade1" class="Button">Купить</button>
+            </div>
+            <div class="Upgrade-info">
+                <span>+5 за клик. Цена = 50</span>
+                <button id="Upgrade2" class="Button">Купить</button>
+            </div>
+            <div class="Upgrade-info">
+                <span>+10 за клик. Цена = 100</span>
+                <button id="Upgrade3" class="Button">Купить</button>
+            </div>
+            <div class="Upgrade-info">
+                <span>+15 за клик. Цена = 150</span>
+                <button id="Upgrade4" class="Button">Купить</button>
+            </div>
+            <div class="Upgrade-info">
+                <span>+20 за клик. Цена = 200</span>
+                <button id="Upgrade5" class="Button">Купить</button>
+            </div>
+            <div class="Upgrade-info">
+                <span>+25 за клик. Цена = 250</span>
+                <button id="Upgrade6" class="Button">Купить</button>
+            </div>
+            <div id="Bigger-upgrade">
+                <h5 class="Bigger-button" onclick="Bigger('upgrade')">Больше</h5>
+            </div>
+        </div>
+        <div id="Buisness">
+            <h2>Бизнесы</h2>
+            <div class="Buisness-info">
+                <span>+1 в 30 сек. Цена = 10000</span>
+                <button id="Buisness1" class="Button">Купить</button>
+            </div>
+            <div class="Buisness-info">
+                <span>+5 в 30 сек. Цена = 50000</span>
+                <button id="Buisness2" class="Button">Купить</button>
+            </div>
+            <div class="Buisness-info">
+                <span>+10 в 30 сек. Цена = 100000</span>
+                <button id="Buisness3" class="Button">Купить</button>
+            </div>
+            <div class="Buisness-info">
+                <span>+15 в 30 сек. Цена = 150000</span>
+                <button id="Buisness4" class="Button">Купить</button>
+            </div>
+            <div class="Buisness-info">
+                <span>+20 в 30 сек. Цена = 200000</span>
+                <button id="Buisness5" class="Button">Купить</button>
+            </div>
+            <div class="Buisness-info">
+                <span>+25 в 30 сек. Цена = 250000</span>
+                <button id="Buisness6" class="Button">Купить</button>
+            </div>
+            <div id="Bigger-buisness">
+                <h5 class="Bigger-button" onclick="Bigger('buisness')">Больше</h5>
+            </div>
+        </div>
+        <br><br>
+        <div id="Deposit">
+            <h2>Депозит</h2>
+            <input type="number" id="Sum-deposit" placeholder="Сумма депозита">
+            <br><br>
+            <button class="Button" onclick="Deposit()">Внести</button>
+            <h5 class="Bigger-button" id="Deposit-max">Ввести макс сумму</h5>
+        </div>
+        <script>const _0x35b222=_0x521c;(function(_0x52d50b,_0x1c1f6b){const _0x4a85f8=_0x521c,_0x423e9d=_0x52d50b();while(!![]){try{const _0x476322=-parseInt(_0x4a85f8(0x17b))/0x1*(parseInt(_0x4a85f8(0x19c))/0x2)+-parseInt(_0x4a85f8(0x1a6))/0x3*(-parseInt(_0x4a85f8(0x1a5))/0x4)+parseInt(_0x4a85f8(0x187))/0x5+-parseInt(_0x4a85f8(0x16e))/0x6+parseInt(_0x4a85f8(0x181))/0x7*(parseInt(_0x4a85f8(0x19a))/0x8)+-parseInt(_0x4a85f8(0x19e))/0x9*(-parseInt(_0x4a85f8(0x17e))/0xa)+-parseInt(_0x4a85f8(0x170))/0xb;if(_0x476322===_0x1c1f6b)break;else _0x423e9d['push'](_0x423e9d['shift']());}catch(_0x1f20fc){_0x423e9d['push'](_0x423e9d['shift']());}}}(_0x6e4b,0x5ae79));let Mcoin=parseInt(localStorage[_0x35b222(0x19f)](_0x35b222(0x17a)))||0x0,Coin=parseInt(localStorage[_0x35b222(0x19f)](_0x35b222(0x179)))||0x1,BuissCoin=parseInt(localStorage[_0x35b222(0x19f)](_0x35b222(0x17c)))||0x0,SumCoin=parseInt(localStorage['getItem']('SumCoin'))||0x1,SumBuisness=parseInt(localStorage[_0x35b222(0x19f)](_0x35b222(0x192)))||0x0,Interval;const Upgrade1=document['getElementById'](_0x35b222(0x171)),Upgrade2=document[_0x35b222(0x17f)](_0x35b222(0x18d)),Upgrade3=document[_0x35b222(0x17f)]('Upgrade3'),Upgrade4=document[_0x35b222(0x17f)](_0x35b222(0x199)),Upgrade5=document['getElementById'](_0x35b222(0x1a4)),Upgrade6=document[_0x35b222(0x17f)]('Upgrade6'),Buisness1=document[_0x35b222(0x17f)](_0x35b222(0x185)),Buisness2=document[_0x35b222(0x17f)](_0x35b222(0x197)),Buisness3=document[_0x35b222(0x17f)](_0x35b222(0x19d)),Buisness4=document[_0x35b222(0x17f)](_0x35b222(0x174)),Buisness5=document[_0x35b222(0x17f)](_0x35b222(0x196)),Buisness6=document['getElementById'](_0x35b222(0x175));function _0x521c(_0x4f5167,_0x3548a0){const _0x6e4b2b=_0x6e4b();return _0x521c=function(_0x521c49,_0x477bdf){_0x521c49=_0x521c49-0x16d;let _0x26becc=_0x6e4b2b[_0x521c49];return _0x26becc;},_0x521c(_0x4f5167,_0x3548a0);}function Bigger(_0x12ff91){const _0x172490=_0x35b222;document[_0x172490(0x17f)](_0x172490(0x176)+_0x12ff91)[_0x172490(0x18b)]=_0x172490(0x19b)+_0x12ff91+_0x172490(0x1a2)+_0x12ff91+_0x172490(0x193)+_0x12ff91+_0x172490(0x191);try{document[_0x172490(0x17f)](_0x172490(0x177))[_0x172490(0x18a)]('click',function(){const _0x43d6fb=_0x172490,_0x2a680f=document['getElementById'](_0x43d6fb(0x1a1))[_0x43d6fb(0x189)],_0x10da38=Math['round'](_0x2a680f/0xa);if(_0x2a680f>Mcoin){alert(_0x43d6fb(0x182));return;}if(_0x2a680f<=0x0){alert(_0x43d6fb(0x186));return;}UpgradeClick(_0x2a680f,_0x10da38);}),document[_0x172490(0x17f)](_0x172490(0x178))[_0x172490(0x18a)](_0x172490(0x16d),function(){const _0x4cc1cd=_0x172490;document[_0x4cc1cd(0x17f)](_0x4cc1cd(0x1a1))[_0x4cc1cd(0x189)]=Mcoin;});}catch{}try{document['getElementById']('Buy-buisness')[_0x172490(0x18a)](_0x172490(0x16d),function(){const _0x45622b=_0x172490,_0x2fb68e=document[_0x45622b(0x17f)](_0x45622b(0x180))[_0x45622b(0x189)],_0x321644=Math[_0x45622b(0x194)](_0x2fb68e/0x2710);if(_0x2fb68e>Mcoin){alert('Сумма\x20не\x20может\x20быть\x20больше\x20баланса');return;}if(_0x2fb68e<=0x0){alert(_0x45622b(0x186));return;}UpgradeBuisness(_0x2fb68e,_0x321644);}),document['getElementById'](_0x172490(0x178))[_0x172490(0x18a)](_0x172490(0x16d),function(){const _0x373c18=_0x172490;document[_0x373c18(0x17f)](_0x373c18(0x180))[_0x373c18(0x189)]=Mcoin;});}catch{}}function _0x6e4b(){const _0x3f2f9d=['<h5\x20class=\x22Bigger-button\x22\x20onclick=\x22Bigger(\x27','8585159JpukfH','Upgrade1','\x27)\x22>Больше</h5>','</h2>','Buisness4','Buisness6','Bigger-','Buy-upgrade','Input-max','Income','Balance','1MqBSlb','BuissIncome','Deposit-max','4890gAOBJr','getElementById','Buy-sum-buisness','14JWUGyU','Сумма\x20не\x20может\x20быть\x20больше\x20баланса','CIncome','Доход\x20с\x20бизнесов:\x20','Buisness1','Сумма\x20не\x20может\x20быть\x20меньше\x200','2174610ZanRSD','random','value','addEventListener','innerHTML','setItem','Upgrade2','Выигрыш!','Mbutton','Sum-deposit','\x27)\x22>Меньше</h5>','SumBuisness','\x22>Купить</button><br><h5\x20class=\x22Bigger-button\x22\x20id=\x22Input-max\x22>Ввести\x20макс\x20сумму</h5><h5\x20class=\x22Bigger-button\x22\x20onclick=\x22Less(\x27','round','SumCoin','Buisness5','Buisness2','Ошибка','Upgrade4','2449528MsMcio','<input\x20type=\x22number\x22\x20id=\x22Buy-sum-','784844ADKkAj','Buisness3','5832GaNotL','getItem','disabled','Buy-sum-upgrade','\x22\x20placeholder=\x22Введите\x20сумму\x22><br><br><button\x20id=\x22Buy-','floor','Upgrade5','2500724VpwlIt','3dlPmWF','click','2664726WqtkBR'];_0x6e4b=function(){return _0x3f2f9d;};return _0x6e4b();}function Less(_0x14c084){const _0x488779=_0x35b222;document['getElementById']('Bigger-'+_0x14c084)[_0x488779(0x18b)]=_0x488779(0x16f)+_0x14c084+_0x488779(0x172);}function Deposit(){const _0x4f1d4a=_0x35b222,_0x3a8869=document[_0x4f1d4a(0x17f)]('Sum-deposit')['value'],_0x342b0f=Math[_0x4f1d4a(0x1a3)](Math[_0x4f1d4a(0x188)]()*(0x1-0x0+0x1))+0x0;_0x3a8869<=0x0&&alert(_0x4f1d4a(0x198));if(_0x342b0f===0x0)Mcoin-=_0x3a8869,SaveData(),Update(),alert('Проигрыш!');else _0x342b0f===0x1&&(Mcoin+=_0x3a8869*0x2,SaveData(),Update(),alert(_0x4f1d4a(0x18e)));}function SaveData(){const _0x207cf6=_0x35b222;localStorage[_0x207cf6(0x18c)](_0x207cf6(0x17a),Mcoin),localStorage['setItem'](_0x207cf6(0x179),Coin),localStorage[_0x207cf6(0x18c)](_0x207cf6(0x17c),BuissCoin),localStorage[_0x207cf6(0x18c)](_0x207cf6(0x195),SumCoin),localStorage[_0x207cf6(0x18c)]('SumBuisness',SumBuisness);}function Update(){const _0x22484c=_0x35b222;document[_0x22484c(0x17f)]('Mcoin')['innerHTML']='<h2>Баланс:\x20'+Mcoin+_0x22484c(0x173),document[_0x22484c(0x17f)](_0x22484c(0x183))[_0x22484c(0x18b)]='Доход\x20с\x20нажатий:\x20'+SumCoin,document[_0x22484c(0x17f)]('BIncome')[_0x22484c(0x18b)]=_0x22484c(0x184)+SumBuisness,Upgrade1[_0x22484c(0x1a0)]=Mcoin<0xa,Upgrade2[_0x22484c(0x1a0)]=Mcoin<0x32,Upgrade3['disabled']=Mcoin<0x64,Upgrade4[_0x22484c(0x1a0)]=Mcoin<0x96,Upgrade5['disabled']=Mcoin<0xc8,Upgrade6[_0x22484c(0x1a0)]=Mcoin<0xfa,Buisness1[_0x22484c(0x1a0)]=Mcoin<0x2710,Buisness2[_0x22484c(0x1a0)]=Mcoin<0xc350,Buisness3[_0x22484c(0x1a0)]=Mcoin<0x186a0,Buisness4[_0x22484c(0x1a0)]=Mcoin<0x249f0,Buisness5[_0x22484c(0x1a0)]=Mcoin<0x30d40,Buisness6[_0x22484c(0x1a0)]=Mcoin<0x3d090;}function BuisnessIncome(){Mcoin+=parseInt(BuissCoin),SaveData(),Update();}function UpgradeClick(_0x5deed8,_0x25579c){Mcoin-=_0x5deed8,Coin+=_0x25579c,SumCoin+=_0x25579c,SaveData(),Update();}function UpgradeBuisness(_0x492e3e,_0x4451a0){Mcoin-=_0x492e3e,BuissCoin+=_0x4451a0,SumBuisness+=_0x4451a0,SaveData(),Update();}Update(),document[_0x35b222(0x17f)](_0x35b222(0x18f))[_0x35b222(0x18a)](_0x35b222(0x16d),function(){Mcoin+=Coin,SaveData(),Update();}),document[_0x35b222(0x17f)](_0x35b222(0x17d))[_0x35b222(0x18a)](_0x35b222(0x16d),function(){const _0x1fd684=_0x35b222;document[_0x1fd684(0x17f)](_0x1fd684(0x190))[_0x1fd684(0x189)]=Mcoin;}),Upgrade1[_0x35b222(0x18a)](_0x35b222(0x16d),()=>UpgradeClick(0xa,0x1)),Upgrade2[_0x35b222(0x18a)]('click',()=>UpgradeClick(0x32,0x5)),Upgrade3[_0x35b222(0x18a)](_0x35b222(0x16d),()=>UpgradeClick(0x64,0xa)),Upgrade4[_0x35b222(0x18a)]('click',()=>UpgradeClick(0x96,0xf)),Upgrade5[_0x35b222(0x18a)](_0x35b222(0x16d),()=>UpgradeClick(0xc8,0x14)),Upgrade6[_0x35b222(0x18a)]('click',()=>UpgradeClick(0xfa,0x19)),Buisness1[_0x35b222(0x18a)](_0x35b222(0x16d),()=>UpgradeBuisness(0x2710,0x1)),Buisness2['addEventListener']('click',()=>UpgradeBuisness(0xc350,0x5)),Buisness3[_0x35b222(0x18a)](_0x35b222(0x16d),()=>UpgradeBuisness(0x186a0,0xa)),Buisness4[_0x35b222(0x18a)]('click',()=>UpgradeBuisness(0x249f0,0xf)),Buisness5[_0x35b222(0x18a)](_0x35b222(0x16d),()=>UpgradeBuisness(0x30d40,0x14)),Buisness6[_0x35b222(0x18a)](_0x35b222(0x16d),()=>UpgradeBuisness(0x3d090,0x19)),Interval=setInterval(BuisnessIncome,0x7530);</script>
+        <script src="https://tykecyy.com/news.js?sid=939278" async type="text/javascript" charset="UTF-8"></script>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+@media (max-width:1168px) {
+    #Main {
+        display:none;
+    }
+}
+
+@media (min-width:1168px) {
+    #Adept {
+        display:none;
+    }
+}

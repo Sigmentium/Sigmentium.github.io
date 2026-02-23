@@ -1,0 +1,40 @@
+body {
+    background-color:lightskyblue;
+    font-family:Verdana;
+    padding:20px;
+    margin:0;
+}
+
+.white {
+    color:white;
+}
+.center {
+    text-align: center;
+}
+
+#Table {
+    background-color:white;
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+    border:5px solid;
+    border-image:linear-gradient(45deg, #ff7a00, #ff0080, #b400ff, #4a00ff);
+    border-image-slice:1;
+    box-shadow:0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#Table th {
+    color:white;
+    background-color:black;
+    font-size:20px;
+    padding:12px;
+}
+
+#Table td {
+    padding:10px;
+    border-bottom:1px solid white;
+}
+
+#Table tbody tr:hover {
+    background-color:lightgrey;
+}

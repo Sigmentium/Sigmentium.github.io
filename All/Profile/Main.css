@@ -1,0 +1,106 @@
+body {
+    background-color:lightskyblue;
+    font-family:Verdana;
+    margin:0;
+}
+a {
+    color:black;
+    text-decoration:none;
+}
+a:hover {
+    color:cadetblue;
+}
+img {
+    border:2px solid white;
+    border-radius:15px;
+}
+
+.SupCenter, .Stats {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.Stats {
+    animation-delay:0s;
+    animation-duration:1.5s;
+    animation-name:Stats;
+    gap:250px;
+}
+.center {
+    text-align:center;
+}
+
+#Up {
+    background-color:lightblue;
+    width:100%;
+    height:auto;
+    z-index:2;
+    border:2px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:150px;
+}
+#Header {
+    animation-delay:0s;
+	animation-duration:1.5s;
+    animation-name:Header;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1;
+    gap:200px;
+}
+#Min {
+    background-color:lightgrey;
+    width:250px;
+    height:250px;
+    border:3px solid black;
+    border-radius:20px;
+}
+
+#Copy, #Copy2 {
+    color:white;
+    background-color:black;
+    width:150px;
+    height:30px;
+    font-size:15px;
+    cursor:pointer;
+    border:2px solid white;
+    border-radius:10px;
+}
+
+@keyframes Header {
+    from {
+        opacity:0;
+        gap:10px;
+    }
+    to {
+        opacity:1;
+        gap:200px;
+    }
+}
+@keyframes Stats {
+    from {
+        opacity:0;
+        gap:700px;
+    }
+    to {
+        opacity:1;
+        gap:250px;
+    }
+}
+
+
+
+@media (max-width:600px) {
+    #Main {
+        display:none;
+    }
+}
+
+@media (min-width:600px) {
+    #Adept {
+        display:none;
+    }
+}

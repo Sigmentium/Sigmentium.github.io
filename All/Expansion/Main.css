@@ -1,0 +1,14 @@
+body {
+    background-color:lightskyblue;
+    font-family:Verdana;
+}
+a {
+    color:black;
+}
+a:hover {
+    color:cadetblue;
+}
+
+.center {
+    text-align:center;
+}

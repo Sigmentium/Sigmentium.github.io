@@ -1,0 +1,11 @@
+@media (max-width:725px) {
+    #ColumnL, #ColumnR {
+        display:none;
+    }
+}
+
+@media (min-width:725px) {
+    #Adept {
+        display:none;
+    }
+}
